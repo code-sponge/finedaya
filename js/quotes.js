@@ -3,7 +3,7 @@ const quotes = [
     quote: 'Just keep your cool and your sense of humor.',
     author: 'Smiley Blanton',
   },
-  { quote: 'Forgetr the failres. Keep the lessons.', author: 'Dalai Lama' },
+  { quote: 'Forget the failures. Keep the lessons.', author: 'Dalai Lama' },
   {
     quote:
       'Our imagination is the only limit to what we can hope to have in future.',
@@ -21,7 +21,7 @@ const quotes = [
   },
   {
     quote:
-      'The secret of your sccessi s determined by your daily agenda. It all comes down to what you do today.',
+      'The secret of your success s determined by your daily agenda. It all comes down to what you do today.',
     author: 'John C. Maxwell',
   },
   {
@@ -58,7 +58,9 @@ const quotes = [
 ];
 
 const quote = document.querySelector('#quote span:first-child');
+quote.className = 'quote';
 const author = document.querySelector('#quote span:last-child');
+author.className = 'author';
 
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 

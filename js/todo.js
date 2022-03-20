@@ -8,23 +8,22 @@ let toDos = [];
 
 function paintTodo(newTodoObj) {
   const li = document.createElement('li');
+  li.className = 'todo-item';
   li.id = newTodoObj.id;
   const span = document.createElement('span');
-  const btn = document.createElement('button');
+  const btn = document.createElement('i');
   span.innerText = newTodoObj.text;
-  btn.innerText = '❌';
+  btn.className = 'fa-solid fa-xmark';
   li.appendChild(span);
   li.appendChild(btn);
   toDoList.appendChild(li);
-  li.addEventListener('click', removeTodo);
+  btn.addEventListener('click', removeTodo);
 }
 
 function removeTodo(e) {
   const li = e.target.parentElement;
-
   console.log(li.id);
   li.remove();
-
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
   saveTodo();
 }
