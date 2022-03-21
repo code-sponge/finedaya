@@ -9,7 +9,7 @@
   --font-tiny: 20px;
 
   /* animation */
-  --animation-duration: 300ms;
+  --animation-duration: 200ms;
 }
 
 * {
@@ -55,11 +55,12 @@ body {
   font-weight: lighter;
   opacity: 0;
   transition: all var(--animation-duration) ease-in;
-  width: 180px;
+  pointer-events: none;
 }
 
 #search-form .visible {
   opacity: 1;
+  pointer-events: all;
 }
 
 #search-form button {
@@ -176,10 +177,13 @@ input {
 .todo-item {
   display: flex;
   justify-content: space-between;
+  padding: 3px 5px;
+  transition: all var(--animation-duration) ease;
 }
 
 .todo-item:hover {
   background-color: rgba(0, 0, 0, 0.379);
+  border-radius: 3%;
 }
 
 .todo-item span:hover {
@@ -193,8 +197,11 @@ input {
 .fa-xmark {
   margin-left: 5px;
   font-size: var(--font-tiny);
+  transition: all var(--animation-duration) ease;
 }
 
 .fa-xmark:hover {
   cursor: pointer;
+  color: #f75d5d;
+  transform: scale(1.05);
 }
