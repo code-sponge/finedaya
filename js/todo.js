@@ -18,6 +18,11 @@ function paintTodo(newTodoObj) {
   li.appendChild(btn);
   toDoList.appendChild(li);
   btn.addEventListener('click', removeTodo);
+  span.addEventListener('click', doneToDo);
+}
+
+function doneToDo(e) {
+  e.target.classList.toggle('done');
 }
 
 function removeTodo(e) {

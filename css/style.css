@@ -182,9 +182,12 @@ input {
   background-color: rgba(0, 0, 0, 0.379);
 }
 
+.todo-item span:hover {
+  cursor: pointer;
+}
+
 .done {
   text-decoration: line-through;
-  color: #d0d0d0;
 }
 
 .fa-xmark {
