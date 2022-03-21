@@ -11,7 +11,7 @@ const quotes = [
   },
   {
     quote:
-      'If you think you are not cool enough , you will never be cool enough.',
+      'If you think you are not cool enough, you will never be cool enough.',
     author: 'Romy Miller',
   },
   {

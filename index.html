@@ -8,6 +8,7 @@
       src="https://kit.fontawesome.com/2fd6e9de1d.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/search.js" defer></script>
     <script src="./js/greeting.js" defer></script>
     <script src="./js/clock.js" defer></script>
     <script src="./js/date.js" defer></script>
@@ -18,21 +19,32 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <section id="greeting">
-      <form id="login-form" class="hidden">
-        <input
-          required
-          maxlength="15"
-          type="text"
-          placeholder="What is your name?"
-        />
-      </form>
-      <h1 id="greeting" class="hidden"></h1>
+    <section id="right">
+      <div class="search">
+        <form id="search-form">
+          <input required type="text" placeholder="Search Google" />
+          <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+      <div id="greeting">
+        <form id="login-form" class="hidden">
+          <input
+            required
+            maxlength="15"
+            type="text"
+            placeholder="What is your name?"
+          />
+        </form>
+        <h1 class="greeting" class="hidden"></h1>
+      </div>
+      <div id="time">
+        <h2 id="clock">00:00:00</h2>
+        <div id="date">0000-00-00</div>
+      </div>
     </section>
-    <section id="time">
-      <h2 id="clock">00:00:00</h2>
-      <div id="date">0000-00-00</div>
-    </section>
+
     <div id="todo">
       <ul id="todo-list"></ul>
       <form action="" id="todo-form">

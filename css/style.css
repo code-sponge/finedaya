@@ -9,7 +9,7 @@
   --font-tiny: 20px;
 
   /* animation */
-  --animation-duration: 250ms;
+  --animation-duration: 300ms;
 }
 
 * {
@@ -35,6 +35,44 @@ body {
   display: none;
 }
 
+#right {
+  position: fixed;
+  right: 2%;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* search */
+#search-form {
+  display: flex;
+  align-items: center;
+}
+
+#search-form input {
+  font-size: var(--font-tiny);
+  font-weight: lighter;
+  opacity: 0;
+  transition: all var(--animation-duration) ease-in;
+  width: 180px;
+}
+
+#search-form .visible {
+  opacity: 1;
+}
+
+#search-form button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: var(--font-small);
+}
+
+#search-form button:hover {
+  cursor: pointer;
+}
+
 /* greeting */
 input {
   background-color: transparent;
@@ -43,10 +81,19 @@ input {
   border-left: 0;
   border-right: 0;
   border-color: var(--color-white);
+  outline: none;
+  padding-left: 10px;
+}
+
+#login-form {
+  margin-right: 34px;
+  height: 50px;
+  margin-top: 10px;
 }
 
 #login-form input {
   font-size: var(--font-medium);
+  width: 330px;
 }
 
 ::placeholder {
@@ -54,11 +101,15 @@ input {
 }
 
 #greeting {
-  position: fixed;
-  right: 2%;
-  top: 23%;
-  margin: 10px 0;
   font-size: 50px;
+  height: 80px;
+  margin: 0;
+}
+
+.greeting {
+  height: 50px;
+  margin: 15px 0;
+  font-size: 60px;
 }
 
 /* time */
@@ -66,9 +117,6 @@ input {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  position: absolute;
-  right: 2%;
-  top: 30%;
 }
 
 #clock {
@@ -113,6 +161,10 @@ input {
   bottom: 3%;
 }
 
+#todo-form input {
+  font-size: 18px;
+}
+
 #todo-list {
   display: flex;
   flex-direction: column;
@@ -123,6 +175,16 @@ input {
 
 .todo-item {
   display: flex;
+  justify-content: space-between;
+}
+
+.todo-item:hover {
+  background-color: rgba(0, 0, 0, 0.379);
+}
+
+.done {
+  text-decoration: line-through;
+  color: #d0d0d0;
 }
 
 .fa-xmark {

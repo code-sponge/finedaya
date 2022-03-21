@@ -10,7 +10,7 @@ function onGeoSuccess(position) {
       const city = document.querySelector('.city');
       const weather = document.querySelector('.weather');
       city.innerHTML = data.name;
-      weather.innerText = `${data.weather[0].main} ${data.main.temp}`;
+      weather.innerText = `${data.weather[0].main} ${data.main.temp}°C`;
     });
 }
 
