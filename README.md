@@ -35,17 +35,11 @@
   medai query를 이용하여 다양한 기기에서 호환이 되도록 만들었다.
 - JavaScript
 
-### Accomplished from this project
-
----
-
--
-
 ### What I learned
 
 ---
 
-- local Storage
+- local Storage 사용 목적 , 방법
 
 ### Updates
 
@@ -59,7 +53,10 @@
 ---
 
 - 날씨 클릭 시 일주일 일기예보 위젯 보이기
-- 애니메이션을 좀더 부드럽게
+- 애니메이션 추가하기
+  - onLoad
+  - log-in
+- calm bgm 추가
 
 ### Come and look 👀
 
