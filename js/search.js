@@ -8,8 +8,20 @@ function onSubmit(e) {
   searchInput.value = '';
 }
 
-function showInput() {
-  searchInput.classList.add('visible');
+function showInput(e) {
+  console.log(e);
+  const InputClass = searchInput.classList;
+  if (!InputClass.contains('visible')) {
+    e.preventDefault();
+    InputClass.add('visible');
+  } else if (InputClass.contains('visible') && !searchInput.value) {
+    if (!e.pointerType) {
+      return;
+    } else {
+      e.preventDefault();
+      InputClass.remove('visible');
+    }
+  }
 }
 
 function search() {
