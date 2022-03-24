@@ -84,10 +84,12 @@ body {
   outline: none;
   background-color: transparent;
   font-size: var(--font-small);
+  transition: all var(--animation-duration) ease;
 }
 
 #search-form button:hover {
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 /* greeting */
@@ -186,13 +188,13 @@ input {
 .todo-item {
   display: flex;
   justify-content: space-between;
-  padding-right: 5px;
+  padding: 3px 6px;
   transition: all var(--animation-duration) ease;
 }
 
 .todo-item:hover {
   background-color: rgba(0, 0, 0, 0.379);
-  border-radius: 3%;
+  border-radius: 4px;
 }
 
 .todo-item span:hover {
